@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="card-header">
+    <div id="title">
+      <h4>Tempo Agora</h4>
+    </div>
+    <form (ngSubmit)="buscar()">
+      <div class="input-group">
+        <input
+          class="search-input"
+          type="text"
+          [(ngModel)]="cidade"
+          name="cidade"
+          placeholder="Digite o nome da cidade"
+        />
+        <fa-icon
+          class="icon-search"
+          [icon]="faMagnifyingGlass"
+          (click)="buscar()"
+        ></fa-icon>
+      </div>
+    </form>
+  </div>
+
+  <div class="body-card animate__fadeIn">
+    <img id="icon-weather" src="./assets/img/{{ iconName }}" alt="" />
+    <div *ngIf="weatherData">
+      <h1 class="animate__fadeIn">
+        {{ weatherData.main.temp - 273.15 | round }}°C
+      </h1>
+    </div>
+    <div *ngIf="weatherData">
+      <p class="description animate__fadeIn">
+        {{ weatherData.weather[0].description | titlecase }}
+      </p>
+    </div>
+
+    <div class="animate__fadeIn" *ngIf="weatherData">
+      <p>
+        <fa-icon [icon]="faLocationDot"></fa-icon> {{ weatherData.name }},
+        {{ weatherData.sys.country }}
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-card">
+    <div class="sensacao animate__fadeIn">
+      <div><fa-icon [icon]="faTemperatureThreeQuarters"></fa-icon></div>
+      <div>
+        <h3 class="animate__fadeIn" *ngIf="weatherData">
+          {{ weatherData.main.feels_like - 273.15 | round }}°C
+        </h3>
+      </div>
+    </div>
+
+    <div class="umidade animate__fadeIn">
+      <div><fa-icon [icon]="faDroplet"></fa-icon></div>
+      <div>
+        <h3 class="animate__fadeIn" *ngIf="weatherData">
+          {{ weatherData.main.humidity }}
+        </h3>
+      </div>
+    </div>
+    <div class="vento animate__fadeIn">
+      <div><fa-icon [icon]="faWind"></fa-icon></div>
+      <div>
+        <h3 class="animate__fadeIn" *ngIf="weatherData">
+          {{ weatherData.wind.speed }}
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
