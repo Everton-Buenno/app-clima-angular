@@ -1,27 +1,45 @@
-# WeatherApp
+# Aplicação Angular de Clima
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
+Essa é uma aplicação Angular que exibe a temperatura atual de uma determinada localização. A aplicação utiliza a API de clima do OpenWeatherMap para obter as informações de temperatura.
 
-## Development server
+## Instalação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Para instalar a aplicação, você precisa ter o Node.js e o Angular CLI instalados em seu sistema. Em seguida, siga os seguintes passos:
 
-## Code scaffolding
+1. Clone o repositório em sua máquina:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+git clone https://github.com/seu-usuario/clima-angular.git
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. Navegue até o diretório da aplicação:
 
-## Running unit tests
+cd clima-angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+3. Instale as dependências do projeto:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Utilização
+
+Para iniciar a aplicação, basta executar o seguinte comando:
+
+ng serve
+
+
+A aplicação estará disponível em `http://localhost:4200/`.
+
+## Link da Aplicação
+
+Para acessar a aplicação diretamente, você pode visitar o seguinte link: https://clima-angular-appication.netlify.app/
+
+## Contribuindo
+
+Se você deseja contribuir com a aplicação, sinta-se à vontade para enviar pull requests ou abrir issues no repositório do projeto: https://github.com/seu-usuario/clima-angular
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
+
+
+
